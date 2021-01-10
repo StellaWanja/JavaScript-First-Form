@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2{
+    margin-top: 10px;
+    font-size: 1.8em;
+}
+
+p{
+    font-size: 0.9em;
+}
+
+input{
+    padding: 2px;
+}
+
+label{
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+#first_form{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "form_section form_img";
+    grid-column-gap: 2rem;
+}
+
+#form_section{
+    margin: 20px;
+    grid-area: form_section;
+}
+
+#name_section{
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "first_name_section last_name_section";
+    grid-column-gap: 2rem;
+}
+
+#first_name_section{
+    grid-area: first_name_section;
+    position: relative;
+}
+#last_name_section{
+    grid-area: last_name_section;
+    position: relative;
+}
+#first_name_section i, #last_name_section i{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    position: relative;
+}
+
+i{
+    visibility: hidden;
+}
+
+input.error, textarea.error{
+    border: 2px solid #e74c3c;
+}
+i.error{
+    color: #e74c3c;
+}
+
+input.success, textarea.success{
+    border: 2px solid green;
+}
+i.success{
+    color: green;
+}
+
+li i{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.error_msg{
+    color: #e74c3c;
+    visibility: hidden;
+}
+
+span{
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.two_labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+fieldset{
+    border: none;
+}
+
+legend{
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+#radio_section label{
+    font-weight: normal;
+    font-size: 0.9em;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+#radio_section input{
+    cursor: pointer;
+}
+
+#radio_section li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#form_img{
+    grid-area: form_img;
+    background-image: url("form-img.jpg");
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#submit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#submit_btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color:#0779e4;
+    color: #f6f6f6;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9em;
+}
+
+#submit_btn:hover{
+    background-color:#0762b8;
+    border: none;
+}
+
+/* redirect page */
+#container{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+h1,h3{
+    text-align: center;
+}
+
+#container img{
+    margin-top: 20px;
+    width: 50vh;
+}
+
+#thanks_link{
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    margin-top: 20px;
+}
+#thanks_link:hover{
+    color: #e74c3c;
+}
+
+/* mobile screen */
+@media screen and (max-width:768px){
+    #first_form{
+        height: 150vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "form_img" 
+            "form_section";
+    }
+    #form_img{
+        grid-area: form_img;
+    }
+    #form_section{
+        grid-area: form_section;
+    }
+    #name_section{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "first_name_section"
+        "last_name_section";
+    }
+    #first_name_section{
+        grid-area: first_name_section;
+    }
+    #last_name_section{
+        grid-area: last_name_section;
+    }
+}

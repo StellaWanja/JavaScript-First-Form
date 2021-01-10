@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>First Form</title>
+</head>
+<body>
+
+    <section id="first_form">
+
+        <div id="form_section">
+
+            <h2>Let's work together</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur error in rerum accusantium corporis assumenda dolorem tempora nihil odit ducimus.</p>
+
+            <form id="form_content" action="redirect.html" method="POST">
+                <ul>
+                    <div id="name_section">
+                        <div id="first_name_section">
+                            <li>
+                                <label for="first_name">First Name</label>
+                                <input type="text" id="first_name" name="first_name">
+                                <i class="fas fa-check-circle" id="fname_success_icon"></i>
+                                <i class="fas fa-exclamation-circle" id="fname_err_icon"></i>
+                                <span class="error_msg" id="fname_err">Error message</span>
+                            </li>
+                        </div>
+                        <div id="last_name_section">
+                            <li>
+                                <label for="last_name">Last Name</label>
+                                <input type="text" id="last_name" name="last_name">
+                                <i class="fas fa-check-circle" id="lname_success_icon"></i>
+                                <i class="fas fa-exclamation-circle" id="lname_err_icon"></i>
+                                <span class="error_msg" id="lname_err">Error message</span>
+                            </li>    
+                        </div>
+                    </div>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="user_email">
+                        <i class="fas fa-check-circle" id="email_success_icon"></i>
+                        <i class="fas fa-exclamation-circle" id="email_err_icon"></i>
+                        <span class="error_msg" id="email_err">Error message</span>
+                    </li>
+                    <li>
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="user_company">
+                        <i class="fas fa-check-circle" id="company_success_icon"></i>
+                        <i class="fas fa-exclamation-circle" id="company_err_icon"></i>
+                        <span class="error_msg" id="company_err">Error message</span>
+                    </li>
+                    <li>
+                        <label for="phone" class="two_labels">Phone <span>Optional</span></label>
+                        <input type="tel" id="phone" name="user_phone">
+                        <i class="fas fa-check-circle" id="phone_success_icon"></i>
+                        <i class="fas fa-exclamation-circle" id="phone_err_icon"></i>
+                        <span class="error_msg" id="phone_err">Error message</span>
+                    </li>
+                    <li>
+                        <label for="message" class="two_labels">How can we help you? <span>Max 500 characters</span></label>
+                        <textarea id="message" name="user_message"></textarea>
+                        <i class="fas fa-check-circle" id="message_success_icon"></i>
+                        <i class="fas fa-exclamation-circle" id="message_err_icon"></i>
+                        <span class="error_msg" id="message_err">Error message</span>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <legend>Expected budget</legend>
+                            <ul id="radio_section">
+                                <li>
+                                    <input type="radio" id="first_btn" name="budget" value="first">
+                                    <Label for="first_btn">Less than $25K</Label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="second_btn" name="budget" value="second">
+                                    <Label for="second_btn">$25K - $50K</Label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="third_btn" name="budget" value="third">
+                                    <Label for="third_btn">$50K - $100K</Label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="fourth_btn" name="budget" value="fourth">
+                                    <Label for="fourth_btn">$100K+</Label>
+                                </li>
+                            </ul>
+                            <i class="fas fa-exclamation-circle" id="radio_err_icon"></i>
+                            <span class="error_msg" id="radio_err">Error message</span>
+                        </fieldset>                        
+                    </li>
+                    <li>
+                        <label for="last">How did you hear about us?</label>
+                        <input type="last" id="last" name="last">
+                        <i class="fas fa-check-circle" id="lastmsg_success_icon"></i>
+                        <i class="fas fa-exclamation-circle" id="lastmsg_err_icon"></i>
+                        <span class="error_msg" id="lastmsg_err">Error message</span>
+                    </li>
+                </ul>
+                <div id="submit">
+                    <button id="submit_btn">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="form_img"></div>
+
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
